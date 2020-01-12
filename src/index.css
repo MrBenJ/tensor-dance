@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#audio {
+  height: 0;
+  width: 0;
+  visibility: invisible;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  position: relative;
+}
