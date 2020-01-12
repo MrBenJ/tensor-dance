@@ -23,7 +23,7 @@ function AudioProvider({children}) {
     const track = audioCtx.createMediaElementSource(el);
     const play = () => {
       let analyzer = audioCtx.createAnalyser();
-      analyzer.fftSize = 256;
+      analyzer.fftSize = 128;
       track
         .connect(analyzer)
         .connect(audioCtx.destination);
