@@ -7,18 +7,27 @@ import Sphere from './Sphere';
 import Wall from './Wall';
 import Dance from './Dance';
 
-function App() {
+function App(props) {
+  if (props.tf) {
+    return (
+      <div className="App">
+        <AudioProvider>
+          <VisualizationSwitcher>
+            <Wall />
+            <Sphere />
+            <Dance />
+          </VisualizationSwitcher>
+        </AudioProvider>
+      </div>
+    );
+  }
+
   return (
     <div className="App">
-      <AudioProvider>
-        <VisualizationSwitcher>
-          <Wall />
-          <Sphere />
-          <Dance />
-        </VisualizationSwitcher>
-      </AudioProvider>
+      LOADING...
     </div>
-  );
+  )
+
 }
 
 export default App;
