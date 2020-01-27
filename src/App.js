@@ -15,7 +15,7 @@ function App(props) {
           <VisualizationSwitcher>
             <Wall />
             <Sphere />
-            <Dance />
+            <Dance tf={props.tf} video={props.video}/>
           </VisualizationSwitcher>
         </AudioProvider>
       </div>
